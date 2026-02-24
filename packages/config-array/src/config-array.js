@@ -22,7 +22,7 @@ import { filesAndIgnoresSchema } from "./files-and-ignores-schema.js";
 
 /** @typedef {import("./types.ts").ConfigObject} ConfigObject */
 /** @typedef {import("minimatch").MinimatchOptions} MinimatchOptions */
-/** @import * as PathImpl from "@jsr/std__path" */
+/** @typedef {import("@jsr/std__path")} PathImpl */
 
 /*
  * This is a bit of a hack to make TypeScript happy with the Rollup-created
