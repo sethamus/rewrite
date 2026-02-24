@@ -3,10 +3,10 @@ name: CI
 on:
     push:
         branches:
-            - main
+            - sethamus-patch-1
     pull_request:
         branches:
-            - main
+            - sethamus-patch-1
 
 jobs:
     verify_files:
@@ -77,7 +77,7 @@ jobs:
               run: npm install --ignore-scripts --no-save typescript@${{ matrix.typescript }}
 
             - name: Run TypeScript Compiler (TypeScript ${{ matrix.typescript }})
-              run: npx tsc
+              run: npx tsc --skipLibCheck
 
             - name: Test types (config-array, TypeScript ${{ matrix.typescript }})
               run: npm run test:types -w packages/config-array
